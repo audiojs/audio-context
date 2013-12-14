@@ -2,6 +2,8 @@
 # audio-context
 
   A WebAudio Context singleton, because you only ever must have one on your page.
+  
+  [![testling badge](https://ci.testling.com/juliangruber/audio-context.png)](https://ci.testling.com/juliangruber/audio-context)
 
 ## Usage
 
