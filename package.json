@@ -2,12 +2,17 @@
   "name": "audio-context",
   "description": "A WebAudio Context singleton",
   "version": "0.0.0",
+  "scripts": {
+    "test": "node test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/juliangruber/audio-context.git"
   },
   "homepage": "https://github.com/juliangruber/audio-context",
-  "dependencies": {},
+  "dependencies": {
+    "global": "~4.2.1"
+  },
   "devDependencies": {
     "tape": "*"
   },
