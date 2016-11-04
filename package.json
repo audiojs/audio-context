@@ -14,7 +14,7 @@
     "global": "~4.3.1"
   },
   "devDependencies": {
-    "tape": "*"
+    "tape": ">=4.6.2"
   },
   "keywords": [
     "webaudio",
