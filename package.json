@@ -7,9 +7,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/juliangruber/audio-context.git"
+    "url": "git://github.com/audiojs/audio-context.git"
   },
-  "homepage": "https://github.com/juliangruber/audio-context",
+  "homepage": "https://github.com/audiojs/audio-context",
   "dependencies": {
     "global": "~4.3.1"
   },
