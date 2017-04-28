@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-var window = require('global/window');
+var window = require('global/window')
 
-var Context = window.AudioContext || window.webkitAudioContext;
-if (Context) module.exports = new Context;
+var Context = window.AudioContext || window.webkitAudioContext
+if (Context) module.exports = new Context()
