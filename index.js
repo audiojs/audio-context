@@ -1,3 +1,5 @@
+'use strict';
+
 var window = require('global/window');
 
 var Context = window.AudioContext || window.webkitAudioContext;

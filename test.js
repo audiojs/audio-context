@@ -1,3 +1,5 @@
+'use strict';
+
 var test = require('tape');
 
 test('exports audio-context', function(t) {
