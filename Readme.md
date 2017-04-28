@@ -1,8 +1,7 @@
-# audio-context [![Build Status](https://travis-ci.org/audiojs/audio-context.svg?branch=master)](https://travis-ci.org/audiojs/audio-context) [![stable](https://img.shields.io/badge/stability-stable-orange.svg)](http://github.com/badges/stability-badges) [![Greenkeeper badge](https://badges.greenkeeper.io/audiojs/audio-context.svg)](https://greenkeeper.io/)
+# audio-context [![Build Status](https://travis-ci.org/audiojs/audio-context.svg?branch=master)](https://travis-ci.org/audiojs/audio-context) [![stable](https://img.shields.io/badge/stability-stable-green.svg)](http://github.com/badges/stability-badges) [![Greenkeeper badge](https://badges.greenkeeper.io/audiojs/audio-context.svg)](https://greenkeeper.io/) [![npm](https://img.shields.io/npm/v/audio-context.svg)](https://www.npmjs.com/package/audio-context) [![license](https://img.shields.io/npm/l/audio-context.svg)](https://www.npmjs.com/package/audio-context)
 
-[![testling badge](https://ci.testling.com/audiojs/audio-context.png)](https://ci.testling.com/audiojs/audio-context)
 
-  A WebAudio Context singleton, because you only ever must have one on your page.
+A WebAudio Context singleton, because you only ever must have one on your page.
 
 
 ## Usage
@@ -23,13 +22,7 @@ var offlineContext = require('audio-context/offline');
 
 ## Installation
 
-  Install with [component(1)](http://component.io):
-
-```bash
-$ component install juliangruber/audio-context
-```
-
-  Install with [npm](https://npmjs.org):
+Install with [npm](https://npmjs.org):
 
 ```bash
 $ npm install audio-context
@@ -37,4 +30,4 @@ $ npm install audio-context
 
 ## License
 
-  MIT
+MIT
