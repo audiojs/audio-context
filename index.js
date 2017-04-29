@@ -27,5 +27,10 @@ module.exports = function getContext (options) {
 	//cache by sampleRate, rather strong guess
 	var ctx = cache[sampleRate]
 
-	return ctx ? ctx : (ctx = cache[sampleRate] = new Context(options))
+	if (ctx) return ctx
+
+	ctx = new Context(options)
+	cache[ctx.sampleRate] = cache[sampleRate] = ctx
+
+	return ctx
 }
