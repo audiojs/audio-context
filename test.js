@@ -1,17 +1,18 @@
 'use strict';
 
 var test = require('tape');
+var ctx = require('./');
 
-test('exports audio-context', function(t) {
-  var ctx = require('./');
+test('audio-context', function(t) {
+  t.plan(4)
 
-  t.ok(ctx);
-  t.end();
-});
+  var foo = ctx()
+  var bar = ctx()
+  t.is(foo, bar, 'returns singleton')
 
-test('exports audio-context/offline', function(t){
-  var ctx = require('./offline');
+  var baz = ctx({ sampleRate: 44100 })
+  t.not(baz, foo, 'returns unique context')
 
-  t.ok(ctx);
-  t.end();
-});
+  var qux = ctx({ offline: true, channels: 2, length: 1000, sampleRate: 44100 })
+  t.true(qux, 'returns offline context')
+})
