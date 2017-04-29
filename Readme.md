@@ -6,9 +6,7 @@ Creates a WebAudio context singleton with the given options. Returns `null` if n
 ## Example
 
 ```js
-var getContext = require('audio-context')
-
-var ctx = getContext()
+var audioCtx = require('audio-context')()
 ```
 
 You can also create an [`OfflineAudioContext`](https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext) in case you would like to process (faster) without any rendering.
