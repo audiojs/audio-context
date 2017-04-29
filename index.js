@@ -2,5 +2,30 @@
 
 var window = require('global/window')
 
+var OfflineContext = window.OfflineAudioContext || window.webkitOfflineAudioContext
 var Context = window.AudioContext || window.webkitAudioContext
-if (Context) module.exports = new Context()
+
+var cache = {}
+
+module.exports = function getContext (options) {
+	if (!Context) return null
+
+	if (typeof options === 'number') {
+		options = {sampleRate: options}
+	}
+
+	var sampleRate = options && options.sampleRate
+
+
+	if (options && options.offline) {
+		if (!OfflineContext) return null
+
+		return new OfflineContext(options.channels || 2, options.length, sampleRate || 44100)
+	}
+
+
+	//cache by sampleRate, rather strong guess
+	var ctx = cache[sampleRate]
+
+	return ctx ? ctx : (ctx = cache[sampleRate] = new Context(options))
+}
