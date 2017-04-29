@@ -13,7 +13,7 @@ You can also create an [`OfflineAudioContext`](https://developer.mozilla.org/en-
 
 
 ```js
-var offlineContext = getContext({offline: true})
+var offlineContext = require('audio-context')({offline: true})
 ```
 
 
