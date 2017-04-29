@@ -2,15 +2,16 @@
 
 var test = require('tape');
 var createContext = require('./')
+var isBrowser = require('is-browser')
 
-test('exports audio-context', function(t) {
+isBrowser && test('exports audio-context', function(t) {
   var ctx = createContext()
 
   t.ok(ctx)
   t.end()
 });
 
-test('creates singletone by default', function (t) {
+isBrowser && test('creates singletone by default', function (t) {
 	var ctx1 = createContext()
 	var ctx2 = createContext()
 
@@ -19,7 +20,7 @@ test('creates singletone by default', function (t) {
 	t.end()
 });
 
-test('creates singletone for number', function (t) {
+isBrowser && test('creates singletone for number', function (t) {
 	var ctx1 = createContext(10000)
 	var ctx2 = createContext()
 	var ctx3 = createContext()
@@ -30,7 +31,7 @@ test('creates singletone for number', function (t) {
 	t.end()
 });
 
-test('creates singletone for object', function (t) {
+isBrowser && test('creates singletone for object', function (t) {
 	var ctx1 = createContext({sampleRate: 10000})
 	var ctx2 = createContext({sampleRate: 10100})
 	var ctx3 = createContext()
@@ -42,7 +43,7 @@ test('creates singletone for object', function (t) {
 	t.end()
 });
 
-test('exports audio-context/offline', function(t){
+isBrowser && test('exports audio-context/offline', function(t){
   var ctx = createContext({offline: true, length: 100})
   var ctx2 = createContext()
 

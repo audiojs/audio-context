@@ -12,7 +12,8 @@
   "homepage": "https://github.com/audiojs/audio-context",
   "dependencies": {
     "global": "^4.3.1",
-    "ios-safe-audio-context": "^1.0.1"
+    "ios-safe-audio-context": "^1.0.1",
+    "is-browser": "^2.0.1"
   },
   "devDependencies": {
     "tape": "*"
