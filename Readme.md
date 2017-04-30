@@ -1,32 +1,40 @@
-# audio-context [![Build Status](https://travis-ci.org/audiojs/audio-context.svg?branch=master)](https://travis-ci.org/audiojs/audio-context) [![stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)](http://github.com/badges/stability-badges) [![Greenkeeper badge](https://badges.greenkeeper.io/audiojs/audio-context.svg)](https://greenkeeper.io/) [![npm](https://img.shields.io/npm/v/audio-context.svg)](https://www.npmjs.com/package/audio-context) [![license](https://img.shields.io/npm/l/audio-context.svg)](https://www.npmjs.com/package/audio-context)
+# audio-context [![Build Status](https://travis-ci.org/audiojs/audio-context.svg?branch=master)](https://travis-ci.org/audiojs/audio-context) [![unstable](https://img.shields.io/badge/stability-unstable-brightgreen.svg)](http://github.com/badges/stability-badges) [![Greenkeeper badge](https://badges.greenkeeper.io/audiojs/audio-context.svg)](https://greenkeeper.io/) [![npm](https://img.shields.io/npm/v/audio-context.svg)](https://www.npmjs.com/package/audio-context) [![license](https://img.shields.io/npm/l/audio-context.svg)](https://www.npmjs.com/package/audio-context)
+
+Creates a WebAudio context singleton with the given options. Returns `null` if not supported.
 
 
-A WebAudio Context singleton, because you only ever must have one on your page.
+## Example
+
+```js
+var audioCtx = require('audio-context')()
+```
+
+You can also create an [`OfflineAudioContext`](https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext) in case you would like to process (faster) without any rendering.
+
+
+```js
+var offlineContext = require('audio-context')({offline: true})
+```
 
 
 ## Usage
 
-```js
-var ctx = require('audio-context');
-```
+[![npm install audio-context](https://nodei.co/npm/audio-context.png?mini=true)](https://npmjs.org/package/audio-context/)
 
-## OfflineAudioContext
+#### `ctx = createContext(options|sampleRate)`
 
-  You can also require an [`OfflineAudioContext`](https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext)
-  in case you would like to process (faster) without any rendering.
+Returns a singleton audio context for the given `sampleRate`.
 
+The options:
 
-```js
-var offlineContext = require('audio-context/offline');
-```
+- `sampleRate` - if specified, will set the context sampleRate.
+- `latencyHint` - if specified, will control latency. One of `'balanced'`, `'playback'`, `'interaction'` (default) or number.
+- `offline` - if specified, will create [OfflineAudioContext](https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext).
+- `length` - if specified, will set number of frames for offline context.
+- `channels` - if specified, will set number of channels for offline context.
+- `{...contextAttributes}` any other options for the context.
 
-## Installation
-
-Install with [npm](https://npmjs.org):
-
-```bash
-$ npm install audio-context
-```
+Handles vendor prefixing for audio contexts. Returns `null` if we are not in a browser, or if the context is not available, or if there was an error creating the context.
 
 ## License
 
