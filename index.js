@@ -29,7 +29,15 @@ module.exports = function getContext (options) {
 
 	if (ctx) return ctx
 
-	ctx = new Context(options)
+	//several versions of firefox have issues with the
+	//constructor argument
+	//see: https://bugzilla.mozilla.org/show_bug.cgi?id=1361475
+	try {
+		ctx = new Context(options)
+	}
+	catch (err) {
+		ctx = new Context()
+	}
 	cache[ctx.sampleRate] = cache[sampleRate] = ctx
 
 	return ctx
