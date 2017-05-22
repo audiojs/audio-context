@@ -36,6 +36,19 @@ The options:
 
 Handles vendor prefixing for audio contexts. Returns `null` if we are not in a browser, or if the context is not available, or if there was an error creating the context.
 
+
+## Running tests
+
+```sh
+# Run tests in tape-run's default browser
+npm test
+
+# Run in a specified browser.
+# See https://github.com/juliangruber/tape-run#runopts for options
+npm test -- --browser firefox
+```
+
+
 ## License
 
 MIT
