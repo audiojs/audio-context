@@ -63,3 +63,9 @@ isBrowser && test('exports audio-context/offline', function(t){
   t.end();
 });
 
+// Non-browser test, returns null
+!isBrowser && test('returns null in non-browser env', function(t){
+  var ctx = createContext()
+  t.is(ctx, null)
+  t.end()
+})
