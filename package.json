@@ -3,7 +3,7 @@
   "description": "A WebAudio Context singleton",
   "version": "1.0.1",
   "scripts": {
-    "test": "browserify test.js | tape-run"
+    "test": "browserify test.js | tape-run && node test"
   },
   "repository": {
     "type": "git",
