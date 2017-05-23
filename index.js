@@ -3,12 +3,12 @@
 var cache = {}
 
 module.exports = function getContext (options) {
-  if (!window) return null
-  
-  var OfflineContext = window.OfflineAudioContext || window.webkitOfflineAudioContext
-  var Context = window.AudioContext || window.webkitAudioContext
-  
-  if (!Context) return null
+	if (!window) return null
+	
+	var OfflineContext = window.OfflineAudioContext || window.webkitOfflineAudioContext
+	var Context = window.AudioContext || window.webkitAudioContext
+	
+	if (!Context) return null
 
 	if (typeof options === 'number') {
 		options = {sampleRate: options}
