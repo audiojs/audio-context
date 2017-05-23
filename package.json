@@ -10,9 +10,6 @@
     "url": "git://github.com/audiojs/audio-context.git"
   },
   "homepage": "https://github.com/audiojs/audio-context",
-  "dependencies": {
-    "global": "^4.3.1"
-  },
   "devDependencies": {
     "browserify": "^14.3.0",
     "is-browser": "^2.0.1",
@@ -22,6 +19,7 @@
   "keywords": [
     "webaudio",
     "audio",
+    "audiojs",
     "context",
     "singleton"
   ],
