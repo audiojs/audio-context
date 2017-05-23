@@ -14,10 +14,12 @@ isBrowser && test('exports audio-context', function(t) {
 isBrowser && test('creates singletone by default', function (t) {
 	var ctx1 = createContext()
 	var ctx2 = createContext()
-	var ctx3 = createContext(44100)
-	var ctx4 = createContext({sampleRate: 44100})
+	var rate = ctx2.sampleRate
+	var ctx3 = createContext(rate)
+	var ctx4 = createContext({sampleRate: rate})
 
 	t.ok(ctx1)
+	t.equal(typeof ctx2.sampleRate, 'number')
 	t.equal(ctx1, ctx2)
 	t.equal(ctx3, ctx4)
 	t.equal(ctx2, ctx3)
