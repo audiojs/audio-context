@@ -69,3 +69,14 @@ isBrowser && test('exports audio-context/offline', function(t){
   t.is(ctx, null)
   t.end()
 })
+
+
+isBrowser && test('new Context', function (t) {
+	var ctx = new createContext()
+	var ctx2 = new createContext()
+
+	t.equal(ctx, ctx2)
+	t.ok(ctx.sampleRate)
+
+	t.end()
+})
