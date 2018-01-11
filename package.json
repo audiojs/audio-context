@@ -11,7 +11,6 @@
   },
   "homepage": "https://github.com/audiojs/audio-context",
   "devDependencies": {
-    "browserify": "^14.3.0",
     "is-browser": "^2.0.1",
     "tape": "*",
     "tape-run": "^3.0.0"
