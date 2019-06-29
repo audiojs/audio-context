@@ -13,7 +13,7 @@
   "devDependencies": {
     "browserify": "^15.1.0",
     "is-browser": "^2.0.1",
-    "tape": "*",
+    "tape": ">=4.11.0",
     "tape-run": "^3.0.0"
   },
   "keywords": [
