@@ -10,7 +10,7 @@ Besides:
 - Chrome requires interaction to enable _AudioContext_;
 - spec fluctuates; 
 
-Better use _WebAudioAPI_, [web-audio-api](https://github.com/audiojs/web-audio-api), [web-audio-js](https://ghub.io/web-audio-js) directly in your app.
+Better use _WebAudioAPI_, [web-audio-api](https://github.com/audiojs/web-audio-api), [web-audio-js](https://ghub.io/web-audio-js) or other engine directly in your app.
 If you need just a convention for your component, implement simple context chache defaulting to `{sampleRate: 44100}`. 
 
 ---
