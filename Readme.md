@@ -1,5 +1,20 @@
 # audio-context [![Build Status](https://travis-ci.org/audiojs/audio-context.svg?branch=master)](https://travis-ci.org/audiojs/audio-context) [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Greenkeeper badge](https://badges.greenkeeper.io/audiojs/audio-context.svg)](https://greenkeeper.io/) [![npm](https://img.shields.io/npm/v/audio-context.svg)](https://www.npmjs.com/package/audio-context) [![license](https://img.shields.io/npm/l/audio-context.svg)](https://www.npmjs.com/package/audio-context)
 
+**DEPRECATION NOTICE**
+
+Since _AudioContext_ depends on particular web-audio engine, it cannot be used as solid base for other audio components.
+
+Besides:
+
+- There's no necessarily common API between _OfflineContext_ and _AudioContext_;
+- Chrome requires interaction to enable _AudioContext_;
+- spec fluctuates; 
+
+Better use _WebAudioAPI_, [web-audio-api](https://github.com/audiojs/web-audio-api), [web-audio-js](https://ghub.io/web-audio-js) directly in your app.
+If you need just a convention for your component, implement simple context chache defaulting to `{sampleRate: 44100}`. 
+
+---
+
 Creates a WebAudio context singleton with the given options. Returns `null` if not supported.
 
 
